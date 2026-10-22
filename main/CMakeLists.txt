@@ -1,0 +1,19 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "storage_nvs.c"
+        "gpio_controller.c"
+        "wifi_manager.c"
+        "captive_portal.c"
+        "mqtt_service.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        nvs_flash
+        esp_wifi
+        esp_netif
+        esp_http_server
+        esp_driver_gpio
+        esp_event
+        esp_timer
+        lwip
+)
